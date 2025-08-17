@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Poorni Gems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Style css -->
+       <link rel="stylesheet" href="css/main.css">
+       <link rel="stylesheet" href="css/components/cards.css">
+    <style>
+        /* Keep all the existing styles */
+        /* ... */
+        
+        .contact-map {
+            height: 400px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .contact-info-card {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-gem text-2xl text-purple-600"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Poorni Gems</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                    <a href="marketplace.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Marketplace</a>
+                    <a href="tools.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Tools</a>
+                    <a href="land.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Land</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
+                    <a href="contact.html" class="nav-link text-purple-600 font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn-primary">Sign In</button>
+                    <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+                    <a href="marketplace.html" class="block px-3 py-2 text-gray-700">Marketplace</a>
+                    <a href="tools.html" class="block px-3 py-2 text-gray-700">Tools</a>
+                    <a href="land.html" class="block px-3 py-2 text-gray-700">Land</a>
+                    <a href="about.html" class="block px-3 py-2 text-gray-700">About</a>
+                    <a href="contact.html" class="block px-3 py-2 text-purple-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="hero-section relative pt-24">
+        <div class="absolute inset-0">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/baf89188-5e44-41d1-8478-2a704f668324.png" alt="Luxury jewelry store interior" class="w-full h-full object-cover opacity-40" />
+        </div>
+        <div class="container mx-auto px-4 text-center text-white relative z-10 py-24">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Poorni Gems</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Our team is ready to assist with all your gemstone needs</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Get in Touch</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We'd love to hear from you</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="contact-info-card bg-gray-50 p-6 rounded-xl">
+                            <div class="text-purple-600 text-3xl mb-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">New York Showroom</h3>
+                            <p class="text-gray-600">123 Gem Street<br>Diamond District<br>New York, NY 10001</p>
+                        </div>
+
+                        <div class="contact-info-card bg-gray-50 p-6 rounded-xl">
+                            <div class="text-purple-600 text-3xl mb-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Phone</h3>
+                            <p class="text-gray-600">+1 (555) 123-4567<br>Mon-Fri: 9AM-6PM EST</p>
+                        </div>
+
+                        <div class="contact-info-card bg-gray-50 p-6 rounded-xl">
+                            <div class="text-purple-600 text-3xl mb-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Email</h3>
+                            <p class="text-gray-600">info@poornigems.com<br>sales@poornigems.com</p>
+                        </div>
+
+                        <div class="contact-info-card bg-gray-50 p-6 rounded-xl">
+                            <div class="text-purple-600 text-3xl mb-4">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Support</h3>
+                            <p class="text-gray-600">support@poornigems.com<br>24/7 emergency gem services</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Global Offices</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold">Jaipur, India</h4>
+                                <p class="text-sm text-gray-600">Headquarters & Gem Cutting Center</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold">Bangkok, Thailand</h4>
+                                <p class="text-sm text-gray-600">Asia-Pacific Trading Hub</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold">Geneva, Switzerland</h4>
+                                <p class="text-sm text-gray-600">European Operations</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold">Dubai, UAE</h4>
+                                <p class="text-sm text-gray-600">Middle East Trading Center</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1978.9667467667307!2d80.498507711813!3d7.248409982357442!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1755291047339!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" placeholder="First Name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                                <input type="text" placeholder="Last Name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                            </div>
+                            <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                            <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-lg">
+                            <select class="w-full p-3 border border-gray-300 rounded-lg" required>
+                                <option value="">Select Department</option>
+                                <option value="sales">Sales & Purchases</option>
+                                <option value="support">Customer Support</option>
+                                <option value="land">Mining Land Inquiries</option>
+                                <option value="tools">Equipment Questions</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                            <textarea rows="5" placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
+                            <button type="submit" class="btn-primary w-full text-lg py-3">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="mt-8 bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4">Frequently Asked Questions</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold mb-2">How do I schedule an appointment at your showroom?</h4>
+                                <p class="text-gray-600">You can call us directly or use our online booking system. Appointments are recommended for personalized service.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Do you offer gemstone certification?</h4>
+                                <p class="text-gray-600">Yes, all our gemstones come with proper certification from recognized gemological laboratories.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">What are your business hours?</h4>
+                                <p class="text-gray-600">Our New York showroom is open Mon-Fri 9AM-6PM and Sat 10AM-4PM. Other locations may vary.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-purple-600 font-medium mt-4 inline-block">View All FAQs →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section-padding bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Subscribe to Our Newsletter</h2>
+                <p class="text-xl text-gray-600 mb-6 max-w-2xl mx-auto">Get updates on new arrivals, exclusive offers, and gemstone market insights.</p>
+                <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-1 p-3 border border-gray-300 rounded-lg">
+                    <button class="btn-primary px-6 py-3">Subscribe</button>
+                </div>
+                <p class="text-sm text-gray-500 mt-3">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <!-- Keep the existing footer content -->
+         <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-gem text-2xl text-purple-400"></i>
+                        <h3 class="text-xl font-bold">Poorni Gems</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted partner in the world of precious gemstones, professional tools, and mining opportunities.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#marketplace" class="text-gray-400 hover:text-white transition-colors">Marketplace</a></li>
+                        <li><a href="#tools" class="text-gray-400 hover:text-white transition-colors">Tools</a></li>
+                        <li><a href="#land" class="text-gray-400 hover:text-white transition-colors">Mining Land</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Gem Evaluation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Certification</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Custom Jewelry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Investment Advice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mining Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new arrivals and exclusive offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 p-2 rounded-l-lg text-gray-800">
+                        <button class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 Poorni Gems. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+        <!-- ... -->
+    </footer>
+
+    <!-- Modals -->
+      <!-- Gem Detail Modal -->
+    <div id="gemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gemModal')">&times;</span>
+            <div id="gemModalContent">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sell Gem Modal -->
+    <div id="sellModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sellModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Sell Your Gemstones</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required>
+                </div>
+                <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg" required>
+                <select class="w-full p-3 border rounded-lg" required>
+                    <option value="">Gem Type</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="sapphire">Sapphire</option>
+                    <option value="emerald">Emerald</option>
+                    <option value="diamond">Diamond</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" placeholder="Estimated Carat Weight" class="w-full p-3 border rounded-lg">
+                <textarea rows="4" placeholder="Describe your gemstone(s)" class="w-full p-3 border rounded-lg" required></textarea>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Images</label>
+                    <input type="file" multiple accept="image/*" class="w-full p-3 border rounded-lg">
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit for Evaluation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Land Sell Modal -->
+    <div id="landSellModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('landSellModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">List Your Mining Land</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Property Owner Name" class="w-full p-3 border rounded-lg" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required>
+                </div>
+                <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg" required>
+                <input type="text" placeholder="Property Location" class="w-full p-3 border rounded-lg" required>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Total Acreage" class="w-full p-3 border rounded-lg" required>
+                    <select class="w-full p-3 border rounded-lg" required>
+                        <option value="">Gem Type</option>
+                        <option value="ruby">Ruby Deposits</option>
+                        <option value="sapphire">Sapphire Deposits</option>
+                        <option value="emerald">Emerald Deposits</option>
+                        <option value="diamond">Diamond Deposits</option>
+                        <option value="mixed">Mixed Deposits</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Asking Price (USD)" class="w-full p-3 border rounded-lg" required>
+                <textarea rows="4" placeholder="Property description, mining history, infrastructure details" class="w-full p-3 border rounded-lg" required></textarea>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Property Images & Documents</label>
+                    <input type="file" multiple accept="image/*,.pdf" class="w-full p-3 border rounded-lg">
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Listing</button>
+            </form>
+        </div>
+    </div>
+    <!-- ... -->
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/marketplace.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

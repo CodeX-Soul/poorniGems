@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemstone Marketplace | Poorni Gems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Style css -->
+       <link rel="stylesheet" href="css/main.css">
+       <link rel="stylesheet" href="css/components/cards.css">
+    <style>
+        /* Keep all the existing styles */
+        /* ... */
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-gem text-2xl text-purple-600"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Poorni Gems</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                    <a href="marketplace.html" class="nav-link text-purple-600 font-medium">Marketplace</a>
+                    <a href="tools.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Tools</a>
+                    <a href="land.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Land</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn-primary">Sign In</button>
+                    <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+                    <a href="marketplace.html" class="block px-3 py-2 text-purple-600">Marketplace</a>
+                    <a href="tools.html" class="block px-3 py-2 text-gray-700">Tools</a>
+                    <a href="land.html" class="block px-3 py-2 text-gray-700">Land</a>
+                    <a href="about.html" class="block px-3 py-2 text-gray-700">About</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-700">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Marketplace Section -->
+    <section class="section-padding bg-gray-50 pt-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Gemstone Marketplace</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Buy and sell premium gemstones from our curated collection</p>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="mb-8 text-center">
+                <input type="text" placeholder="Search gemstones..." class="search-bar mb-4" id="gemSearch">
+                <div class="flex flex-wrap justify-center">
+                    <button class="filter-btn active" data-filter="all">All Gems</button>
+                    <button class="filter-btn" data-filter="ruby">Ruby</button>
+                    <button class="filter-btn" data-filter="sapphire">Sapphire</button>
+                    <button class="filter-btn" data-filter="emerald">Emerald</button>
+                    <button class="filter-btn" data-filter="diamond">Diamond</button>
+                    <button class="filter-btn" data-filter="topaz">Topaz</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div>
+            </div>
+
+            <!-- Gems Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gemsGrid">
+                <!-- All the gem cards from original -->
+                <!-- Ruby Gems -->
+                <div class="gem-card ruby" data-gem-type="ruby">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ba8ca1cc-fc0c-4478-94ac-da7b18062252.png" alt="Brilliant cut red ruby gemstone with deep crimson color and exceptional clarity on white background" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4">
+                            <span class="price-tag">$15,500</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Premium Ruby</h3>
+                        <p class="text-gray-600 mb-3">5.2 Carats • Burma Origin</p>
+                        <p class="text-sm text-gray-500 mb-4">Exceptional clarity with vivid red color, perfect for luxury jewelry.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1" onclick="openGemModal('ruby1')">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sapphire Gems -->
+                <div class="gem-card sapphire" data-gem-type="sapphire">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/943cc76b-bac8-41d5-9894-b42205ab2879.png" alt="Oval cut blue sapphire gemstone with deep royal blue color and brilliant faceting on neutral background" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4">
+                            <span class="price-tag">$12,800</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Royal Blue Sapphire</h3>
+                        <p class="text-gray-600 mb-3">4.8 Carats • Kashmir Origin</p>
+                        <p class="text-sm text-gray-500 mb-4">Rare Kashmir sapphire with velvety blue color and minimal inclusions.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1" onclick="openGemModal('sapphire1')">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emerald Gems -->
+                <div class="gem-card emerald" data-gem-type="emerald">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2146fbba-3511-457e-badd-91b732a009ee.png" alt="Emerald cut green emerald gemstone with vivid forest green color and natural inclusions on elegant background" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4">
+                            <span class="price-tag">$18,200</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Colombian Emerald</h3>
+                        <p class="text-gray-600 mb-3">6.1 Carats • Colombian Origin</p>
+                        <p class="text-sm text-gray-500 mb-4">Vibrant green Colombian emerald with excellent transparency.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1" onclick="openGemModal('emerald1')">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diamond Gems -->
+                <div class="gem-card diamond" data-gem-type="diamond">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e3a39ef6-f6bc-4dab-be82-f909be2add9a.png" alt="Round brilliant cut diamond with exceptional fire and brilliance reflecting rainbow colors on pristine white background" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4">
+                            <span class="price-tag">$25,000</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Brilliant Diamond</h3>
+                        <p class="text-gray-600 mb-3">3.5 Carats • D Color, VVS1</p>
+                        <p class="text-sm text-gray-500 mb-4">Exceptional white diamond with perfect cut and maximum brilliance.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1" onclick="openGemModal('diamond1')">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topaz Gems -->
+                <div class="gem-card topaz" data-gem-type="topaz">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/07a7c77d-7239-4212-8b72-a86b6f497a50.png" alt="Cushion cut golden topaz gemstone with warm honey color and excellent transparency on sophisticated background" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4">
+                            <span class="price-tag">$3,200</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Imperial Topaz</h3>
+                        <p class="text-gray-600 mb-3">8.3 Carats • Brazilian Origin</p>
+                        <p class="text-sm text-gray-500 mb-4">Beautiful imperial topaz with golden hue and exceptional clarity.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1" onclick="openGemModal('topaz1')">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional gems for variety -->
+                <div class="gem-card ruby" data-gem-type="ruby">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/118414ae-5441-4279-8a1c-4150a72ff8cf.png" alt="Heart shaped red ruby gemstone with intense pigeon blood red color and romantic cut on luxury background" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4">
+                            <span class="price-tag">$8,900</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Heart Ruby</h3>
+                        <p class="text-gray-600 mb-3">3.2 Carats • Thai Origin</p>
+                        <p class="text-sm text-gray-500 mb-4">Beautiful heart-shaped ruby perfect for romantic jewelry pieces.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1" onclick="openGemModal('ruby2')">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gem-card emerald" data-gem-type="emerald">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/85600e1f-87a8-40bf-857a-38aa8214019b.png" alt="Pear shaped emerald gemstone with rich forest green color and natural garden inclusions on marble background" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4">
+                            <span class="price-tag">$14,500</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Pear Emerald</h3>
+                        <p class="text-gray-600 mb-3">5.7 Carats • Zambian Origin</p>
+                        <p class="text-sm text-gray-500 mb-4">Elegant pear-shaped emerald with excellent green saturation.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1" onclick="openGemModal('emerald2')">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gem-card sapphire" data-gem-type="sapphire">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2a863952-898e-448d-ac23-af65ed5ffe65.png" alt="Cushion cut pink sapphire gemstone with delicate rose color and brilliant sparkle on silk background" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4">
+                            <span class="price-tag">$11,200</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Pink Sapphire</h3>
+                        <p class="text-gray-600 mb-3">4.1 Carats • Madagascar Origin</p>
+                        <p class="text-sm text-gray-500 mb-4">Delicate pink sapphire with exceptional clarity and brilliance.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1" onclick="openGemModal('sapphire2')">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- ... -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+                <nav class="flex items-center space-x-2">
+                    <button class="px-3 py-1 rounded bg-gray-200 text-gray-700 hover:bg-purple-600 hover:text-white">&laquo;</button>
+                    <button class="px-3 py-1 rounded bg-purple-600 text-white">1</button>
+                    <button class="px-3 py-1 rounded bg-gray-200 text-gray-700 hover:bg-purple-600 hover:text-white">2</button>
+                    <button class="px-3 py-1 rounded bg-gray-200 text-gray-700 hover:bg-purple-600 hover:text-white">3</button>
+                    <button class="px-3 py-1 rounded bg-gray-200 text-gray-700 hover:bg-purple-600 hover:text-white">&raquo;</button>
+                </nav>
+            </div>
+
+            <!-- Sell Your Gems Section -->
+            <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+                <!-- Keep the existing sell gems section -->
+                                 <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Sell Your Gemstones</h3>
+                    <p class="text-gray-600">Get the best prices for your precious gems with our expert evaluation</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Expert Evaluation</h4>
+                        <p class="text-gray-600">Our certified gemologists provide accurate assessments</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Best Prices</h4>
+                        <p class="text-gray-600">Get competitive market rates for your gemstones</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Secure Process</h4>
+                        <p class="text-gray-600">Safe and insured transactions guaranteed</p>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <button class="btn-primary text-lg px-8 py-4" onclick="openSellModal()">Start Selling</button>
+                </div>
+                 
+                <!-- ... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Gemstone Certification</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Our gemstones come with trusted certification</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 border border-gray-200 rounded-xl hover:shadow-md transition-all">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">GIA Certified</h3>
+                    <p class="text-gray-600">All our diamonds come with GIA certification, the gold standard in diamond grading.</p>
+                </div>
+
+                <div class="text-center p-6 border border-gray-200 rounded-xl hover:shadow-md transition-all">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AIGS Certified</h3>
+                    <p class="text-gray-600">Our colored gemstones are certified by AIGS, ensuring accurate color and quality assessment.</p>
+                </div>
+
+                <div class="text-center p-6 border border-gray-200 rounded-xl hover:shadow-md transition-all">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">In-House Evaluation</h3>
+                    <p class="text-gray-600">Our team of certified gemologists provides detailed reports for all gemstones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <!-- Keep the existing footer content -->
+         <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-gem text-2xl text-purple-400"></i>
+                        <h3 class="text-xl font-bold">Poorni Gems</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted partner in the world of precious gemstones, professional tools, and mining opportunities.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#marketplace" class="text-gray-400 hover:text-white transition-colors">Marketplace</a></li>
+                        <li><a href="#tools" class="text-gray-400 hover:text-white transition-colors">Tools</a></li>
+                        <li><a href="#land" class="text-gray-400 hover:text-white transition-colors">Mining Land</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Gem Evaluation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Certification</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Custom Jewelry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Investment Advice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mining Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new arrivals and exclusive offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 p-2 rounded-l-lg text-gray-800">
+                        <button class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 Poorni Gems. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+        <!-- ... -->
+    </footer>
+
+    <!-- Modals -->
+      <!-- Gem Detail Modal -->
+    <div id="gemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gemModal')">&times;</span>
+            <div id="gemModalContent">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sell Gem Modal -->
+    <div id="sellModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sellModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Sell Your Gemstones</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required>
+                </div>
+                <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg" required>
+                <select class="w-full p-3 border rounded-lg" required>
+                    <option value="">Gem Type</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="sapphire">Sapphire</option>
+                    <option value="emerald">Emerald</option>
+                    <option value="diamond">Diamond</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" placeholder="Estimated Carat Weight" class="w-full p-3 border rounded-lg">
+                <textarea rows="4" placeholder="Describe your gemstone(s)" class="w-full p-3 border rounded-lg" required></textarea>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Images</label>
+                    <input type="file" multiple accept="image/*" class="w-full p-3 border rounded-lg">
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit for Evaluation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Land Sell Modal -->
+    <div id="landSellModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('landSellModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">List Your Mining Land</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Property Owner Name" class="w-full p-3 border rounded-lg" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required>
+                </div>
+                <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg" required>
+                <input type="text" placeholder="Property Location" class="w-full p-3 border rounded-lg" required>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Total Acreage" class="w-full p-3 border rounded-lg" required>
+                    <select class="w-full p-3 border rounded-lg" required>
+                        <option value="">Gem Type</option>
+                        <option value="ruby">Ruby Deposits</option>
+                        <option value="sapphire">Sapphire Deposits</option>
+                        <option value="emerald">Emerald Deposits</option>
+                        <option value="diamond">Diamond Deposits</option>
+                        <option value="mixed">Mixed Deposits</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Asking Price (USD)" class="w-full p-3 border rounded-lg" required>
+                <textarea rows="4" placeholder="Property description, mining history, infrastructure details" class="w-full p-3 border rounded-lg" required></textarea>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Property Images & Documents</label>
+                    <input type="file" multiple accept="image/*,.pdf" class="w-full p-3 border rounded-lg">
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Listing</button>
+            </form>
+        </div>
+    </div>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <!-- <script src="js/marketplace.js"></script>
+  <script src="js/modal.js"></script> -->
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Gem Tools | Poorni Gems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Style css -->
+       <link rel="stylesheet" href="css/main.css">
+       <link rel="stylesheet" href="css/components/cards.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-gem text-2xl text-purple-600"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Poorni Gems</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                    <a href="marketplace.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Marketplace</a>
+                    <a href="tools.html" class="nav-link text-purple-600 font-medium">Tools</a>
+                    <a href="land.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Land</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn-primary">Sign In</button>
+                    <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+                    <a href="marketplace.html" class="block px-3 py-2 text-gray-700">Marketplace</a>
+                    <a href="tools.html" class="block px-3 py-2 text-purple-600">Tools</a>
+                    <a href="land.html" class="block px-3 py-2 text-gray-700">Land</a>
+                    <a href="about.html" class="block px-3 py-2 text-gray-700">About</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-700">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tools Section -->
+    <section class="section-padding bg-white pt-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Professional Gem Tools</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Equip yourself with the finest tools for gemstone evaluation, cutting, and mining</p>
+            </div>
+
+            <!-- Tools Categories -->
+            <div class="mb-8">
+                <div class="flex flex-wrap justify-center gap-2">
+                    <button class="filter-btn active" data-filter="all">All Tools</button>
+                    <button class="filter-btn" data-filter="testing">Testing Equipment</button>
+                    <button class="filter-btn" data-filter="cutting">Cutting & Polishing</button>
+                    <button class="filter-btn" data-filter="cleaning">Cleaning</button>
+                    <button class="filter-btn" data-filter="mining">Mining Tools</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                </div>
+            </div>
+
+            <!-- Tools Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- All the tool cards from original -->
+             <!-- Gem Testing Tools -->
+                <div class="gem-card">
+                    <div class="p-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0f3bc526-9e17-4d0f-a2f5-a2994b23b8bc.png" alt="Professional gemstone refractometer with digital display and precision optics for measuring refractive index" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 class="text-xl font-bold mb-2">Digital Refractometer</h3>
+                        <p class="text-gray-600 mb-3">$2,850</p>
+                        <p class="text-sm text-gray-500 mb-4">High-precision digital refractometer for accurate gemstone identification and quality assessment.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">Add to Cart</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gem-card">
+                    <div class="p-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/99cee6dc-3009-4b0d-aa20-cc06a76d7a22.png" alt="Professional gem cutting machine with diamond wheels and precision controls for faceting gemstones" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 class="text-xl font-bold mb-2">Gem Cutting Machine</h3>
+                        <p class="text-gray-600 mb-3">$15,500</p>
+                        <p class="text-sm text-gray-500 mb-4">Professional-grade faceting machine with digital angle control and variable speed motor.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">Add to Cart</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gem-card">
+                    <div class="p-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f646a5d1-3c47-4cf3-9118-280c30764d01.png" alt="Digital gem scale with precision measurement capabilities and protective draft shield for accurate weighing" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 class="text-xl font-bold mb-2">Precision Gem Scale</h3>
+                        <p class="text-gray-600 mb-3">$890</p>
+                        <p class="text-sm text-gray-500 mb-4">Ultra-precise digital scale with 0.001 carat accuracy for gemstone weighing.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">Add to Cart</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gem-card">
+                    <div class="p-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f0419a80-b067-4c20-9739-e6958938ee41.png" alt="Professional gemological microscope with LED illumination and high magnification for detailed gem examination" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 class="text-xl font-bold mb-2">Gemological Microscope</h3>
+                        <p class="text-gray-600 mb-3">$4,200</p>
+                        <p class="text-sm text-gray-500 mb-4">High-powered microscope with LED illumination for detailed inclusion analysis.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">Add to Cart</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gem-card">
+                    <div class="p-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b17ad166-07d6-4811-94bb-3bc0e784c5b5.png" alt="Ultrasonic gem cleaning machine with digital timer and heating function for professional jewelry maintenance" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 class="text-xl font-bold mb-2">Ultrasonic Cleaner</h3>
+                        <p class="text-gray-600 mb-3">$650</p>
+                        <p class="text-sm text-gray-500 mb-4">Professional ultrasonic cleaner with heating function for thorough gem cleaning.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">Add to Cart</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gem-card">
+                    <div class="p-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6b817f92-be6e-48f8-a8f0-68a615c29a0f.png" alt="Professional mining equipment set including picks, brushes, and safety gear for gemstone excavation" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 class="text-xl font-bold mb-2">Mining Tool Kit</h3>
+                        <p class="text-gray-600 mb-3">$320</p>
+                        <p class="text-sm text-gray-500 mb-4">Complete set of mining tools including picks, brushes, and safety equipment.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">Add to Cart</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- ... -->
+            </div>
+
+            <!-- Training Section -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Professional Training</h3>
+                        <p class="text-gray-600 mb-6">Learn to use professional gemological equipment with our certified training programs.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Hands-on training with all equipment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Certified instructors with decades of experience</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Small class sizes for personalized attention</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Certification upon completion</span>
+                            </li>
+                        </ul>
+                        <button class="btn-primary mt-6">Learn About Training</button>
+                    </div>
+                    <div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0f3bc526-9e17-4d0f-a2f5-a2994b23b8bc.png" alt="Gemological training session with instructor demonstrating equipment use to students" class="w-full rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Equipment Maintenance</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Keep your tools in perfect working condition</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Calibration Service</h3>
+                    <p class="text-gray-600 mb-4">Precision calibration of all gemological instruments to ensure accurate measurements.</p>
+                    <button class="btn-primary">Schedule Service</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Repair Service</h3>
+                    <p class="text-gray-600 mb-4">Expert repair of damaged equipment by certified technicians using genuine parts.</p>
+                    <button class="btn-primary">Request Repair</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Maintenance Plans</h3>
+                    <p class="text-gray-600 mb-4">Annual maintenance plans to keep your equipment in top condition with priority service.</p>
+                    <button class="btn-primary">View Plans</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <!-- Keep the existing footer content -->
+         <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-gem text-2xl text-purple-400"></i>
+                        <h3 class="text-xl font-bold">Poorni Gems</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted partner in the world of precious gemstones, professional tools, and mining opportunities.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#marketplace" class="text-gray-400 hover:text-white transition-colors">Marketplace</a></li>
+                        <li><a href="#tools" class="text-gray-400 hover:text-white transition-colors">Tools</a></li>
+                        <li><a href="#land" class="text-gray-400 hover:text-white transition-colors">Mining Land</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Gem Evaluation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Certification</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Custom Jewelry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Investment Advice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mining Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new arrivals and exclusive offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 p-2 rounded-l-lg text-gray-800">
+                        <button class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 Poorni Gems. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+        <!-- ... -->
+    </footer>
+
+    <!-- Modals -->
+      <!-- Gem Detail Modal -->
+    <div id="gemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gemModal')">&times;</span>
+            <div id="gemModalContent">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sell Gem Modal -->
+    <div id="sellModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sellModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Sell Your Gemstones</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required>
+                </div>
+                <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg" required>
+                <select class="w-full p-3 border rounded-lg" required>
+                    <option value="">Gem Type</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="sapphire">Sapphire</option>
+                    <option value="emerald">Emerald</option>
+                    <option value="diamond">Diamond</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" placeholder="Estimated Carat Weight" class="w-full p-3 border rounded-lg">
+                <textarea rows="4" placeholder="Describe your gemstone(s)" class="w-full p-3 border rounded-lg" required></textarea>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Images</label>
+                    <input type="file" multiple accept="image/*" class="w-full p-3 border rounded-lg">
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit for Evaluation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Land Sell Modal -->
+    <div id="landSellModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('landSellModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">List Your Mining Land</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Property Owner Name" class="w-full p-3 border rounded-lg" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required>
+                </div>
+                <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg" required>
+                <input type="text" placeholder="Property Location" class="w-full p-3 border rounded-lg" required>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Total Acreage" class="w-full p-3 border rounded-lg" required>
+                    <select class="w-full p-3 border rounded-lg" required>
+                        <option value="">Gem Type</option>
+                        <option value="ruby">Ruby Deposits</option>
+                        <option value="sapphire">Sapphire Deposits</option>
+                        <option value="emerald">Emerald Deposits</option>
+                        <option value="diamond">Diamond Deposits</option>
+                        <option value="mixed">Mixed Deposits</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Asking Price (USD)" class="w-full p-3 border rounded-lg" required>
+                <textarea rows="4" placeholder="Property description, mining history, infrastructure details" class="w-full p-3 border rounded-lg" required></textarea>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Property Images & Documents</label>
+                    <input type="file" multiple accept="image/*,.pdf" class="w-full p-3 border rounded-lg">
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Listing</button>
+            </form>
+        </div>
+    </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <!-- <script src="js/marketplace.js"></script>
+  <script src="js/modal.js"></script> -->
+  <script src="js/auth.js"></script>
+</body>
+</html>
