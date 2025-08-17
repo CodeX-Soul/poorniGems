@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemstone Mining Land | Poorni Gems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Style css -->
+       <link rel="stylesheet" href="css/main.css">
+       <link rel="stylesheet" href="css/components/cards.css">
+    <style>
+        /* Keep all the existing styles */
+        /* ... */
+        
+        .land-feature {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 300px;
+        }
+        
+        .land-feature img {
+            transition: transform 0.5s ease;
+        }
+        
+        .land-feature:hover img {
+            transform: scale(1.05);
+        }
+        
+        .land-feature-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-gem text-2xl text-purple-600"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Poorni Gems</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                    <a href="marketplace.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Marketplace</a>
+                    <a href="tools.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Tools</a>
+                    <a href="land.html" class="nav-link text-purple-600 font-medium">Land</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn-primary">Sign In</button>
+                    <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+                    <a href="marketplace.html" class="block px-3 py-2 text-gray-700">Marketplace</a>
+                    <a href="tools.html" class="block px-3 py-2 text-gray-700">Tools</a>
+                    <a href="land.html" class="block px-3 py-2 text-purple-600">Land</a>
+                    <a href="about.html" class="block px-3 py-2 text-gray-700">About</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-700">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative pt-24">
+        <div class="absolute inset-0">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/819493b9-93fa-4eac-8a3f-a5200e7be5c3.png" alt="Aerial view of gemstone mining land" class="w-full h-full object-cover opacity-40" />
+        </div>
+        <div class="container mx-auto px-4 text-center text-white relative z-10 py-24">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Premium Gemstone Mining Land</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Invest in proven mining locations with exceptional gemstone deposits worldwide</p>
+            <div class="space-x-4">
+                <button class="btn-primary text-lg px-8 py-4" onclick="document.getElementById('available-listings').scrollIntoView({behavior: 'smooth'})">View Listings</button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300" onclick="openLandSellModal()">Sell Your Land</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Mining Regions -->
+    <section class="section-padding bg-white" id="available-listings">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Mining Regions</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Explore our premium mining properties in the world's most productive gemstone regions</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="land-feature">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/819493b9-93fa-4eac-8a3f-a5200e7be5c3.png" alt="Ruby mining in Myanmar" class="w-full h-full object-cover">
+                    <div class="land-feature-overlay">
+                        <h3 class="text-xl font-bold">Myanmar</h3>
+                        <p>Ruby & Sapphire</p>
+                    </div>
+                </div>
+                <div class="land-feature">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c52137b1-cf31-4ffa-97ff-e5494007a581.png" alt="Emerald mining in Colombia" class="w-full h-full object-cover">
+                    <div class="land-feature-overlay">
+                        <h3 class="text-xl font-bold">Colombia</h3>
+                        <p>Emerald</p>
+                    </div>
+                </div>
+                <div class="land-feature">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ba203bbe-aeb6-4986-9d24-c90aafe7397f.png" alt="Sapphire mining in Kashmir" class="w-full h-full object-cover">
+                    <div class="land-feature-overlay">
+                        <h3 class="text-xl font-bold">Kashmir</h3>
+                        <p>Sapphire</p>
+                    </div>
+                </div>
+                <div class="land-feature">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/57b75262-db26-4d86-89b7-5e5151b91e9d.png" alt="Diamond mining in South Africa" class="w-full h-full object-cover">
+                    <div class="land-feature-overlay">
+                        <h3 class="text-xl font-bold">South Africa</h3>
+                        <p>Diamond</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All the land listings from original -->
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Land Listing 1 -->
+                <div class="gem-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/819493b9-93fa-4eac-8a3f-a5200e7be5c3.png" alt="Aerial view of ruby mining land in Myanmar with red soil formations and traditional mining structures" class="w-full h-64 object-cover" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Ruby Mining Land - Myanmar</h3>
+                                <p class="text-gray-600">Mogok Region • 15.2 Acres</p>
+                            </div>
+                            <span class="price-tag text-lg">$850,000</span>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-gem mr-2 text-red-500"></i>
+                                <span>Proven ruby deposits with high-quality stones</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
+                                <span>Prime location in famous Mogok valley</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle mr-2 text-green-500"></i>
+                                <span>All mining permits included</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 mb-4">Historic mining area with ongoing ruby production. Includes existing infrastructure and mining rights.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-map"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Land Listing 2 -->
+                <div class="gem-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c52137b1-cf31-4ffa-97ff-e5494007a581.png" alt="Emerald mining site in Colombia with lush green mountains and excavation areas visible" class="w-full h-64 object-cover" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Emerald Mine - Colombia</h3>
+                                <p class="text-gray-600">Boyacá Region • 23.7 Acres</p>
+                            </div>
+                            <span class="price-tag text-lg">$1,200,000</span>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-gem mr-2 text-green-500"></i>
+                                <span>Active emerald production mine</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-map-marker-alt mr-2 text-green-500"></i>
+                                <span>Located in prime emerald belt</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-users mr-2 text-blue-500"></i>
+                                <span>Experienced local mining team</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 mb-4">Established emerald mine with consistent production and excellent geological potential for expansion.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-map"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Land Listing 3 -->
+                <div class="gem-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ba203bbe-aeb6-4986-9d24-c90aafe7397f.png" alt="Sapphire mining area in Kashmir with snow-capped mountains and alpine mining infrastructure" class="w-full h-64 object-cover" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Sapphire Land - Kashmir</h3>
+                                <p class="text-gray-600">Paddar Valley • 8.5 Acres</p>
+                            </div>
+                            <span class="price-tag text-lg">$2,500,000</span>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-gem mr-2 text-blue-500"></i>
+                                <span>Rare Kashmir sapphire deposits</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star mr-2 text-yellow-500"></i>
+                                <span>World's most valued sapphire source</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-certificate mr-2 text-purple-500"></i>
+                                <span>Government certified mining rights</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 mb-4">Exclusive access to the legendary Kashmir sapphire mines, source of the world's most prized blue sapphires.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-map"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Land Listing 4 -->
+                <div class="gem-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/57b75262-db26-4d86-89b7-5e5151b91e9d.png" alt="Diamond mining operation in South Africa with open pit mine and industrial equipment visible" class="w-full h-64 object-cover" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Diamond Mine - South Africa</h3>
+                                <p class="text-gray-600">Kimberley Region • 45.3 Acres</p>
+                            </div>
+                            <span class="price-tag text-lg">$3,800,000</span>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-gem mr-2 text-gray-400"></i>
+                                <span>High-grade diamond kimberlite pipe</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-industry mr-2 text-gray-600"></i>
+                                <span>Full mining infrastructure included</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-chart-line mr-2 text-green-500"></i>
+                                <span>Proven reserves and production history</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 mb-4">Large-scale diamond mining operation with complete infrastructure and established production capabilities.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn-primary flex-1">View Details</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-all">
+                                <i class="fas fa-map"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sell Land Section -->
+            <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">List Your Mining Land</h3>
+                    <p class="text-gray-600">Connect with serious investors and get the best value for your mining property</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                                <span>Professional land evaluation and pricing</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                                <span>Global network of qualified buyers</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                                <span>Legal assistance for smooth transactions</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                                <span>Geological survey and certification support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn-primary text-lg px-8 py-4" onclick="openLandSellModal()">List Your Property</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ... -->
+
+            <!-- Land Evaluation Section -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Professional Land Evaluation</h3>
+                        <p class="text-gray-600 mb-6">Our team of geologists and mining experts provide comprehensive evaluations of potential mining properties.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Detailed geological surveys</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Gemstone deposit assessment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Mining potential analysis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Infrastructure evaluation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Legal and regulatory compliance</span>
+                            </li>
+                        </ul>
+                        <button class="btn-primary mt-6">Request Evaluation</button>
+                    </div>
+                    <div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/57b75262-db26-4d86-89b7-5e5151b91e9d.png" alt="Geologists conducting field survey of potential mining land" class="w-full rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mining Investment Guide -->
+    <section class="section-padding bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Mining Investment Guide</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Essential information for investing in gemstone mining properties</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Gemstone Potential</h3>
+                    <p class="text-gray-600">Understand how to evaluate the gemstone potential of a mining property, including geological indicators and historical production data.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Legal Considerations</h3>
+                    <p class="text-gray-600">Learn about mining rights, land ownership laws, environmental regulations, and other legal aspects of mining investments.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Financial Analysis</h3>
+                    <p class="text-gray-600">Key financial metrics and considerations for evaluating the profitability of a mining investment.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-primary text-lg px-8 py-4">Download Complete Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <!-- Keep the existing footer content -->
+         <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-gem text-2xl text-purple-400"></i>
+                        <h3 class="text-xl font-bold">Poorni Gems</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted partner in the world of precious gemstones, professional tools, and mining opportunities.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#marketplace" class="text-gray-400 hover:text-white transition-colors">Marketplace</a></li>
+                        <li><a href="#tools" class="text-gray-400 hover:text-white transition-colors">Tools</a></li>
+                        <li><a href="#land" class="text-gray-400 hover:text-white transition-colors">Mining Land</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Gem Evaluation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Certification</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Custom Jewelry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Investment Advice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mining Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new arrivals and exclusive offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 p-2 rounded-l-lg text-gray-800">
+                        <button class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 Poorni Gems. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+        <!-- ... -->
+    </footer>
+
+    <!-- Modals -->
+      <!-- Gem Detail Modal -->
+    <div id="gemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gemModal')">&times;</span>
+            <div id="gemModalContent">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sell Gem Modal -->
+    <div id="sellModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sellModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Sell Your Gemstones</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required>
+                </div>
+                <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg" required>
+                <select class="w-full p-3 border rounded-lg" required>
+                    <option value="">Gem Type</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="sapphire">Sapphire</option>
+                    <option value="emerald">Emerald</option>
+                    <option value="diamond">Diamond</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" placeholder="Estimated Carat Weight" class="w-full p-3 border rounded-lg">
+                <textarea rows="4" placeholder="Describe your gemstone(s)" class="w-full p-3 border rounded-lg" required></textarea>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Images</label>
+                    <input type="file" multiple accept="image/*" class="w-full p-3 border rounded-lg">
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit for Evaluation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Land Sell Modal -->
+    <div id="landSellModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('landSellModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">List Your Mining Land</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Property Owner Name" class="w-full p-3 border rounded-lg" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required>
+                </div>
+                <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg" required>
+                <input type="text" placeholder="Property Location" class="w-full p-3 border rounded-lg" required>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Total Acreage" class="w-full p-3 border rounded-lg" required>
+                    <select class="w-full p-3 border rounded-lg" required>
+                        <option value="">Gem Type</option>
+                        <option value="ruby">Ruby Deposits</option>
+                        <option value="sapphire">Sapphire Deposits</option>
+                        <option value="emerald">Emerald Deposits</option>
+                        <option value="diamond">Diamond Deposits</option>
+                        <option value="mixed">Mixed Deposits</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Asking Price (USD)" class="w-full p-3 border rounded-lg" required>
+                <textarea rows="4" placeholder="Property description, mining history, infrastructure details" class="w-full p-3 border rounded-lg" required></textarea>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Property Images & Documents</label>
+                    <input type="file" multiple accept="image/*,.pdf" class="w-full p-3 border rounded-lg">
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Listing</button>
+            </form>
+        </div>
+    </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <!-- <script src="js/marketplace.js"></script>
+  <script src="js/modal.js"></script> -->
+  <script src="js/auth.js"></script>
+</body>
+</html>
